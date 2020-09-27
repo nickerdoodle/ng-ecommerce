@@ -1,0 +1,19 @@
+<mat-grid-list [style.background]="'lightblue'" cols="16" rowHeight="100px">
+  <mat-grid-tile [colspan]="2">Logo</mat-grid-tile>
+  <mat-grid-tile [colspan]="8">
+    <form>
+      <mat-form-field>
+        <mat-label>Search Products</mat-label>
+        <input
+          [formControl]="searchbar"
+          matInput
+          placeholder="Ex. Electronics"
+          type="text"
+        />
+      </mat-form-field>
+    </form>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="3">Cart</mat-grid-tile>
+  <mat-grid-tile [colspan]="3">Account</mat-grid-tile>
+  <!-- TODO: add side nav component-->
+</mat-grid-list>
