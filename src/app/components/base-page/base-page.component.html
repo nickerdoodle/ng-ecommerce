@@ -1,5 +1,16 @@
-<app-header></app-header>
-<div class="body">
-  <ng-content></ng-content>
-</div>
+<app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+<mat-sidenav-container class="base-container">
+  <mat-sidenav class="sidenav-content" #sidenav mode="side">
+    <mat-list role="list">
+      <mat-list-item role="listitem">Item 1</mat-list-item>
+      <mat-list-item role="listitem">Item 2</mat-list-item>
+      <mat-list-item role="listitem">Item 3</mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="body">
+      <ng-content></ng-content>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
 <app-footer></app-footer>
